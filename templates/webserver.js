@@ -1,15 +1,12 @@
 var gulp = require('gulp'),
-  opn = require('opn');
-var $ = require('gulp-load-plugins')({
-  scope: ['dependencies']
-});
+  opn = require('opn'),
+  webserver = require('gulp-webserver');
 
-var srcHosting = '<%= srcHosting %>',
-  port = 8000;
+var srcHosting = '<%= srcHosting %>';
 
 var server = {
   host: 'localhost',
-  port: port
+  port: 8000
 };
 
 if ($.util.env.host)
@@ -30,8 +27,7 @@ gulp.task('watchWebServer', function()
 gulp.task('webserver', function()
 {
   gulp.src(srcHosting)
-    .pipe($.webserver(
-    {
+    .pipe(webserver({
       host: server.host,
       port: server.port,
       livereload: true,
