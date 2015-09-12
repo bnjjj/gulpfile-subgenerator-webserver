@@ -32,7 +32,7 @@ var gulpfileGenerator = module.exports = generators.Base.extend({
     var self = this;
 
     self.installDependencies();
-    self.npmInstall(['gulp-webserver'], { 'save': true });
+    self.npmInstall(['gulp-webserver'], { 'saveDev': true });
   },
 
   end: function () {
