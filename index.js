@@ -14,7 +14,7 @@ var gulpfileGenerator = module.exports = generators.Base.extend({
     self.prompt([{
       type: 'value',
       name: 'srcHosting',
-      message: 'What is your relative directory path for hosting and livereload ?',
+      message: 'What is the relative path to your application directory for hosting and livereload?',
       default: './app'
     }], function (answer) {
       _.assign(self.vars, answer);
