@@ -9,12 +9,12 @@ var server = {
   port: 8000
 };
 
-if ($.util.env.host)
-  srcHosting = $.util.env.host;
-if ($.util.env.port)
-  port = $.util.env.port;
-if ($.util.env.prod)
-  srcHosting = "./dist";
+// if ($.util.env.host)
+//   srcHosting = $.util.env.host;
+// if ($.util.env.port)
+//   port = $.util.env.port;
+// if ($.util.env.prod)
+//   srcHosting = "./dist";
 
 gulp.task('watchWebServer', function()
 {
